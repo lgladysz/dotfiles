@@ -1,0 +1,9 @@
+# Cmnd alias specification
+Cmnd_Alias WHEELER = /usr/bin/lsof, /usr/bin/nice, /bin/ps, /usr/bin/top, /bin/netstat, /usr/bin/locate, /usr/bin/find, /usr/bin/rsync
+Cmnd_Alias PROCESSES = /bin/nice, /bin/kill, /usr/bin/nice, /usr/bin/ionice, /usr/bin/top, /usr/bin/kill, /usr/bin/killall, /bin/ps, /usr/bin/pkill
+Cmnd_Alias EDITS = /usr/bin/vim, /bin/nano, /usr/share/nano, /bin/cat, /usr/bin/vi, /usr/bin/code, /usr/share/code
+Cmnd_Alias SYSTEM = /usr/sbin/gparted, /usr/bin/apt, /usr/lib/apt, /etc/apt, /usr/bin/apt-get
+Cmnd_Alias POWERS = /usr/sbin/pm-hibernate, /usr/sbin/pm-suspend
+
+# User privilege specification
+%wheel ALL = (ALL) ALL, NOPASSWD: WHEELER, NOPASSWD: PROCESSES, NOPASSWD: SYSTEM, NOPASSWD: EDITS, NOPASSWD: POWERS
